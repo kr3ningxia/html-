@@ -1,0 +1,215 @@
+.search {
+    margin-top: 50px;
+    margin-bottom: 10px; /* 根据需要调整外边距 */
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+ 
+.search-body {
+    background-color: #fff; /* 背景色 */
+    border-radius: 4px; /* 圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    padding: 10px; /* 内边距 */
+}
+ 
+.input-group {
+    display: flex; /* 弹性布局 */
+    align-items: center; /* 垂直居中 */
+}
+ 
+.form-control {
+    flex: 1; /* 弹性占满剩余空间 */
+    height: 40px; /* 输入框高度 */
+    padding: 0 15px; /* 输入框内边距 */
+    border: 1px solid #ccc; /* 边框 */
+    border-radius: 4px; /* 圆角 */
+    outline: none; /* 去掉焦点时的轮廓 */
+    font-size: 14px; /* 字体大小 */
+    transition: all 0.3s ease; /* 过渡效果 */
+}
+ 
+.form-control:focus {
+    border-color: #66afe9; /* 聚焦时边框颜色 */
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6); /* 聚焦时阴影效果 */
+}
+ 
+.input-group-btn {
+    display: flex; /* 弹性布局 */
+    align-items: center; /* 垂直居中 */
+    margin-left: 10px; /* 与输入框的间距 */
+}
+ 
+.btn-search {
+    background-color: #718872; /* 按钮背景色 */
+    color: #fff; /* 按钮文字颜色 */
+    border: none; /* 无边框 */
+    border-radius: 4px; /* 圆角 */
+    padding: 10px 20px; /* 内边距 */
+    font-size: 14px; /* 字体大小 */
+    cursor: pointer; /* 鼠标样式 */
+    transition: all 0.3s ease; /* 过渡效果 */
+}
+ 
+.btn-search:hover {
+    background-color: #9fa3a0; /* 鼠标悬停时背景色 */
+}
+ 
+.search-keyword {
+    margin-top: 10px; /* 与搜索框的间距 */
+    font-size: 12px; /* 字体大小 */
+    color: #666; /* 字体颜色 */
+}
+ 
+/* 清除浮动 */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.yy:hover {
+    box-shadow:3px 3px 6px rgba(0, 0, 0, 0.3);
+    ;
+ }/*添加阴影*/
+ .biaoyu{
+    border: #ccc 2px solid;
+    border-radius: 10px;
+    box-shadow:3px 3px 6px rgba(0, 0, 0, 0.1);
+    border: 2px;
+ }
+ ------------树形菜单部分---------------
+/* 左侧树形菜单样式 */
+.sidebar {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tree-menu {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tree-menu li {
+    margin: 10px 0;
+}
+
+.tree-menu a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.tree-menu a:hover {
+    background-color: #898f89;
+    color: #fff;
+}
+
+.sub-menu {
+    list-style-type: none;
+    padding-left: 20px;  /* 缩进子菜单 */
+    display: none;  /* 初始状态隐藏子菜单 */
+}
+
+.has-children::after {
+    content: " ▼";
+    font-size: 12px;
+    color: #888;
+    margin-left: 10px;
+}
+
+.has-children.open::after {
+    content: " ▲";
+}
+
+.sub-menu li a {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.sub-menu li a:hover {
+    background-color: #a5b0a5;
+    color: #333;
+}
+
+ --------------------------------------
+ ------------------打折区间样式-------------------
+ .discount-options {
+    margin-bottom: 15px;
+}
+
+/*
+每个样式独占一行
+*/
+.discount-option {
+    margin-bottom: 10px; /* 每个折扣选项的间距 */
+}
+
+.discount-option input[type="radio"] {
+    margin-right: 5px; /* 在单选框和标签之间添加间距 */
+}
+
+.discount-option label {
+    margin-right: 10px; /* 标签右边的间距 */
+}
+.submit-button {
+    text-align: center; /* 使按钮居中 */
+    margin-top: 20px; /* 上方间距 */
+}
+/*汉堡按钮*/
+.submit-button button {
+    background-color: #4b4b4b; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    border: none; /* 去除默认边框 */
+    padding: 12px 24px; /* 上下左右的内边距 */
+    font-size: 16px; /* 字体大小 */
+    border-radius: 25px; /* 圆角效果 */
+    cursor: pointer; /* 鼠标悬停时显示为手形光标 */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 动画效果 */
+}
+
+/* 鼠标悬停时的样式 */
+.submit-button button:hover {
+    background-color: #adbcad; /* 鼠标悬停时背景颜色 */
+    transform: translateY(-2px); /* 按钮微微上移 */
+}
+
+/* 鼠标按下时的效果 */
+.submit-button button:active {
+    transform: translateY(1px); /* 鼠标按下时按钮下移 */
+}
+
+/* 按钮禁用状态样式 */
+.submit-button button:disabled {
+    background-color: #e0e0e0; /* 禁用时的背景颜色 */
+    cursor: not-allowed; /* 禁用时鼠标样式 */
+}
+
+---------------------------------------------------
+/* 为 .mission-header 添加虚化背景 */
+.mission-header {
+    position: relative; /* 确保伪元素正确定位 */
+    z-index: 1; /* 确保内容在背景之上 */
+}
+.submit-button button{
+    margin-top: 0%;
+}
+-------------------------------------------
+/* 应用过滤按钮 */
+.product-item {
+    display: block;
+    /* 默认显示所有商品 */
+}
+
+/* 如果商品需要隐藏 */
+.product-item.hidden {
+    display: none;
+}
+

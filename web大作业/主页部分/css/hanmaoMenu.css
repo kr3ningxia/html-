@@ -1,0 +1,101 @@
+/* 主菜单容器 */
+.hb {
+    background-color: rgb(255, 255, 255); /* 背景色 */
+    margin-top: 30px;            /* 上边距 */
+    padding: 10px;               /* 内边距 */
+    width: 250px;                /* 固定宽度 */
+    position: fixed;             /* 固定位置 */
+    right: 0;                    /* 使其浮动到右侧 */
+    top: 30px;                   /* 距离页面顶部一定距离 */
+    z-index: 1000;               /* 保证菜单在页面上方显示 */
+}
+
+/* 菜单列表 */
+.HBmenu {
+    list-style-type: none;       /* 去除列表项的默认样式 */
+    margin: 0;                   /* 去除外边距 */
+    padding: 0;                  /* 去除内边距 */
+    display: flex;               /* 使用flex布局 */
+    flex-direction: column;      /* 列方向排列 */
+}
+
+/* 菜单项 */
+.HBmenu li {
+    position: relative;          /* 为了定位子菜单 */
+    display: block;               /* 保证菜单项纵向排列 */
+    margin-bottom: 5px;           /* 下边距 */
+}
+
+/* 菜单项链接 */
+.HBmenu li a {
+    text-decoration: none;       /* 去除链接的下划线 */
+    color: #333;                 /* 链接文本颜色 */
+    font-size: 16px;             /* 字体大小 */
+    padding: 10px 15px;          /* 内边距 */
+    display: block;              /* 使链接成为块级元素，方便点击 */
+    background-color: #eaeaea;   /* 背景颜色 */
+}
+
+.HBmenu li a:hover {
+    background-color: #727272;   /* 悬停时的背景色 */
+    color: #fff;                 /* 悬停时的文本颜色 */
+}
+
+/* 下拉菜单的样式 */
+.HBmenu .dropdown > .submenu {
+    display: none;                /* 默认隐藏子菜单 */
+    list-style-type: none;        /* 去除子菜单的列表符号 */
+    margin: 0;                    /* 去除外边距 */
+    padding: 0;                   /* 去除内边距 */
+    position: relative;           /* 定位子菜单 */
+    background-color: #f1f1f1;    /* 子菜单背景色 */
+    margin-left: 20px;            /* 子菜单左边距 */
+}
+
+/* 鼠标悬停或点击父菜单项时显示子菜单 */
+.HBmenu .dropdown:hover > .submenu {
+    display: block;               /* 鼠标悬停时显示子菜单 */
+}
+
+/* 子菜单项的样式 */
+.submenu li {
+    display: block;               /* 子菜单项垂直排列 */
+}
+
+.submenu li a {
+    padding: 10px 15px;           /* 子菜单项的内边距 */
+    color: #333;                  /* 子菜单项文本颜色 */
+    text-decoration: none;        /* 去除下划线 */
+    background-color: #f1f1f1;    /* 背景颜色 */
+}
+
+.submenu li a:hover {
+    background-color: #ddd;       /* 子菜单项悬停时的背景色 */
+    color: #606060;               /* 子菜单项悬停时的文本颜色 */
+}
+
+#menuButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 2px solid #000; /* 边框 */
+    background-color: rgba(0, 0, 0, 0); /* 透明背景 */
+    color: #000;
+}
+
+/* 屏幕宽度大于1000px时隐藏菜单 */
+@media (min-width: 1000px) {
+    .hb {
+        display: none;  /* 隐藏菜单 */
+    }
+}
+#menuButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 2px solid #000; /* 边框 */
+    background-color: #d3d3d3; /* 浅灰色背景 */
+    color: #333; /* 深灰色文本 */
+}

@@ -1,0 +1,360 @@
+/* 基础样式 */
+
+html {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* 基础元素样式重置 */
+body, p, ul, li, dl, dt, dd, h1, h2, h3, h4, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    background: #cecece;
+    font-family: 'Roboto Slab', serif;
+}
+
+body a {
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* 清除浮动 */
+.clearfix {
+    clear: both;
+}
+
+/* 容器样式 */
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+/* 头部和导航样式 */
+.header {
+    width: 100%;
+    background: rgba(73, 88, 70, 0.35);
+    padding: 40px 0;
+    position: relative;
+    border-radius: 2px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 5%;
+}
+
+nav ul li {
+    margin: 0 35px;
+    display: inline-block;
+}
+
+nav ul li a {
+    font-family: 'Droid Serif', serif;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #000;
+}
+
+/* 隐藏菜单切换复选框 */
+nav input[type="checkbox"], .menu {
+    position: absolute;
+    right: 2%;
+    top: 10px;
+    display: none;
+}
+
+/* Logo样式 */
+.logo {
+    position: absolute;
+    left: 2%;
+    top: 0;
+}
+
+/* Banner样式 */
+.banner {
+    width: 100%;
+    background: url(../images/banner.jpg) no-repeat center center;
+    background-size: cover;
+    max-height: 1080px;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 1px;
+}
+
+.banner-info {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 30px;
+    float: right;
+    margin-top: 225px;
+    text-align: center;
+}
+
+.banner-info h3 {
+    font-family: 'Droid Serif', serif;
+    font-size: 1.5em;
+    color: #585858;
+}
+
+.banner-info p {
+    font-size: 0.875em;
+    line-height: 1.8em;
+    color: #000;
+    margin: 9px 0 15px;
+}
+
+.banner-info a {
+    display: inline-block;
+    padding: 7px 15px;
+    background: #252a24;
+    font-size: 1em;
+    color: #fff;
+}
+
+a.button:hover, a.button:focus, a.button:active {
+    background: #bfbfbf;
+    text-decoration: underline;
+}
+
+/* Mission部分样式 */
+.mission {
+    background: #eee;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.mission-header {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.mission-header h3 {
+    font-family: 'Droid Serif', serif;
+    font-size: 2em;
+    color: #695831;
+}
+
+.mission-header h4 {
+    font-size: 1.2em;
+}
+
+.mission-container {
+    margin-top: 35px;
+}
+
+.mission_div {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+}
+
+.mission-left img, .mis-left img {
+    width: 100%;
+}
+
+/* Footer样式 */
+.footer {
+    padding: 18px 0;
+    background: #8d8f8d;
+    text-align: center;
+}
+
+.footer p {
+    margin: 9px 0 0;
+    font-size: 0.875em;
+    color: #fff;
+}
+
+.footer p a {
+    color: #fff;
+}
+
+.footer p a:hover, .footer p a.active {
+    color: #000;
+}
+
+/* 媒体查询 */
+@media (max-width: 1200px) {
+    .header {
+        padding: 24px 0;
+    }
+    .logo {
+        width: 13%;
+        right: 6%;
+    }
+    nav > ul li {
+        margin: 0 17px;
+    }
+    .banner-info {
+        width: 55%;
+        padding: 13px;
+        margin-top: 88px;
+    }
+    .banner-info h3, .mission-header h3 {
+        font-size: 1.25em;
+    }
+    .banner-info p {
+        font-size: 0.75em;
+    }
+    .banner-info a {
+        font-size: 0.85em;
+    }
+    .mission {
+        padding: 55px 0;
+    }
+    .mission-header h4 {
+        font-size: 1em;
+    }
+    .mission-left, .mission-right {
+        float: left;
+        width: 50%;
+    }
+}
+
+/* 商品列表和侧边栏样式 */
+.products {
+    background: #eee;
+    padding: 50px 0;
+}
+
+.product-list, .sidebar {
+    float: left;
+    padding: 0 15px;
+}
+
+/* 左侧索引栏样式 */
+.sidebar.left {
+    width: 25%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 右侧商品展示栏样式 */
+.product-list.right {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: calc(33.333% - 10px);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item h4 {
+    font-size: 1.25em;
+    margin: 15px 0;
+}
+
+.product-item p {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.product-item a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #252a24;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.product-item a.button:hover {
+    background: #555;
+}
+
+/* 清除浮动 */
+.clearfix {
+    clear: both;
+}
+
+
+    -------------------搜索栏-------------------
+    .search{
+		width: 100%;
+		margin: 15px auto; 
+	}
+	.search-body{
+		width: 450px;
+		margin: 15px auto;
+	}
+	.search-input input{
+		width: 390px;
+		height: 36px;
+		border-color: #D9534F;
+	}
+	.btn-search{
+		width: 64px;
+	}
+	.search-keyword{
+		margin: 5px auto;
+		cursor: pointer;
+		color: #999;
+	}
+    -------------------搜索栏----------------------

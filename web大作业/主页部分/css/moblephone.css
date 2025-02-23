@@ -1,0 +1,42 @@
+/* 移动设备样式 */
+@media (max-width: 640px) {
+    .header {
+        padding: 25px 0;
+    }
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+    .menu img {
+        width: 50%;
+    }
+    .dh {
+        display: none;
+    }
+    nav ul li {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+    }
+    nav li a {
+        display: block;
+    }
+    .logo {
+        width: 17%;
+        right: 4%;
+    }
+    .mission-header {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    .zp{
+        text-align: left;
+        color: #889785;
+    }
+    
+}

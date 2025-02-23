@@ -1,0 +1,175 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9; /* 背景色为浅灰 */
+    color: #333; /* 文本颜色为深灰 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 添加虚化背景图片 */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/907355648925423878.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* 设置背景虚化效果 */
+    z-index: -1; /* 确保背景位于最底层 */
+}
+
+/* 返回按钮样式 */
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #007BFF;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* 透明白色背景 */
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.8s forwards; /* 动画效果 */
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #007BFF;
+    background-color: #e8f0fe;
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.login-button:active {
+    transform: scale(0.98);
+}
+
+/* 图片占位符 */
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #e8e8e8;
+    border-radius: 12px;  /* 添加圆角 */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    max-width: 100%; /* 图片最大宽度为容器宽度 */
+    height: auto; /* 高度自动调整 */
+    object-fit: cover; /* 保持图片比例，裁剪溢出部分 */
+    border-radius: 12px; /* 图片加圆角，与容器匹配 */
+}
+
+/* 附加登录选项样式 */
+.login-options {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-options a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .input-field {
+        font-size: 14px;
+    }
+
+    .login-button {
+        font-size: 14px;
+    }
+}

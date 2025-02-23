@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>主页</title>
+    <!-- 自定义主题文件 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="./css/response.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/secrch.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/hanmaoMenu.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/moblephone.css" rel="stylesheet" type="text/css" media="all" />
+    
+</head>
+<body>
+<!-- header -->
+ 
+<div class="header">
+    <div class="container">
+        <nav>
+            <ul class="dh">
+                <li><a class="active" href="index.html">首页</a></li>
+                <li><a href="../登录界面/a.html">登录</a></li>
+                <li><a href="../购物车部分/购物车.html">购物车</a></li>
+                <li><a href="../关于我们部分/index.html">关于我们</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+            <!--汉堡菜单按钮-->
+            <button id="menuButton" class="menu">打开菜单</button>
+        </nav>
+        <div class="hb" style="display: none;">
+            <ul class="HBmenu">
+                <li><a class="active" href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <a href="#">商品种类</a>
+                    <ul class="submenu">
+                        <li><a href="#">最新发布</a></li>
+                        <li><a href="#">即将上线</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="../购物车部分/购物车.html">购物车</a>
+                    <ul class="submenu">
+                        <li><a href="../购物车部分/购物车.html">查看购物车</a></li>
+                        <li><a href="#">结算</a></li>
+                    </ul>
+                </li>
+                <li><a href="../关于我们部分/index.html">关于我们</a></li>
+                <li><a href="../登录界面/a.html">用户登录</a></li>
+            </ul>
+        </div>
+        <script>
+        const menuButton = document.getElementById('menuButton');
+        const hbMenu = document.querySelector('.hb');
+        menuButton.addEventListener('click', function() {
+            
+            hbMenu.style.display = hbMenu.style.display === 'block' ? 'none' : 'block';
+            
+            if (hbMenu.style.display === 'block') {
+                menuButton.textContent = '关闭菜单';
+            } else {
+                menuButton.textContent = '展开菜单';
+            }
+        });
+        </script>    
+        <div class="logo ">
+            <a href="index.html"><img src="./images/logo.png"/></a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div> 
+<!-- //header -->
+<!-- banner -->
+<div class="banner">
+    <div class="container">
+        <div class="banner-info">
+            <h3>人生，自在荒野</h3>
+            <p>探索未知，挑战自我，与山川共呼吸——这是户外品牌的共同语言。如同雪峰之巅的呼唤，我们致力于激发你的冒险精神，让你在每一次徒步、攀登中，都能感受到大自然的魅力与力量。加入我们，一起开启无限可能的户外之旅！</p>
+            <a href="../关于我们部分/index.html" class="button">了解更多</a>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- mission -->
+ <div class="mission">
+    <div class="container">
+        <div class="mission-header" id="search-box">
+            <div class="biaoyu">
+                <h3>帐篷乃田野间的梦幻居室筑一方温馨天地</h3>
+                <h3>为您挡风避雨，守护安宁</h3>
+                <h4>我们认为，帐篷不应仅仅是遮蔽之物，而应当是在一日游玩后，让疲惫的身躯得以休憩的温馨卧室。帐篷的布料被精心划分为三个部分：承受风雨侵袭的顶篷，即外帐；营造舒适空间的内部帐篷墙壁；以及支撑露营者体重，与地面亲密接触的底部。我们对每个部分所需的规格都进行了严格验证，从而精心挑选布料的种类、厚度以及编织方式。请根据您的露营人数、季节和风格来做出选择。</h4>
+            </div>
+            <!-- 搜索框 -->
+            <div class="search yy" id="search-box">
+                <div class="search-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="输入你想要的商品">
+                        <span class="input-group-btn">
+                            <a href="search.html"><button class="btn-search" type="button">搜<i class="fa fa-search"></i></button></a>
+                        </span>
+                    </div>
+                    <div class="search-keyword">
+                        <p>帐篷 | 睡袋 | 天幕 | 焚火台 | 野营套组</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+         
+            <!-- 商品展示区 -->
+    <div class="products">
+        <div class="container">
+<!-- 左侧索引栏 -->
+<!-- 左侧索引栏 -->
+<div class="sidebar left yy">
+    <h3 style="margin-top: 30px;">商品分类</h3>
+    <ul class="tree-menu">
+        <li>
+            <a href="javascript:void(0);" class="has-children">新品上架</a>
+            <ul class="sub-menu">
+                <li><a href="#">最新发布</a></li>
+                <li><a href="#">即将上线</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="has-children">热销商品</a>
+            <ul class="sub-menu">
+                <li><a href="#">热销推荐</a></li>
+                <li><a href="#">限时抢购</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="has-children">优惠活动</a>
+            <ul class="sub-menu">
+                <li><a href="#">大促销</a></li>
+                <li><a href="#">限时折扣</a></li>
+            </ul>
+        </li>
+        <li><a href="#canopy-tents-pro">户外装备</a></li>
+        <li><a href="#search-box">搜索商品</a></li>
+        
+        <li>-------------------</li>
+        <li><h4>价格区间</h4></li>
+        <li>
+                <!-- 折扣选择 -->
+                <div class="discount-options">
+                    <label>选择折扣:</label>
+                    <div>
+                        <div class="discount-option">
+                            <input type="radio" id="discount1" name="discount" value="20">
+                            <label for="discount1">20% 折扣</label>
+                        </div>
+                
+                        <div class="discount-option">
+                            <input type="radio" id="discount2" name="discount" value="30">
+                            <label for="discount2">30% 折扣</label>
+                        </div>
+                
+                        <div class="discount-option">
+                            <input type="radio" id="discount3" name="discount" value="50">
+                            <label for="discount3">50% 折扣</label>
+                        </div>
+                
+                        <div class="discount-option">
+                            <input type="radio" id="discount4" name="discount" value="70">
+                            <label for="discount4">70% 折扣</label>
+                        </div>
+                    </div>
+                </div>
+                
+        
+                <!-- 提交按钮 -->
+                <div class="submit-button">
+                    <button type="submit">应用过滤</button>
+                </div>
+            </form>
+        </li>
+
+    </ul>
+    <script src="../js/tree.js"></script>
+</div>
+
+            
+ 
+            <!-- 右侧商品展示栏 -->
+             <div class="zp">
+       
+            </div>
+            <div class="product-list right">
+            
+                <div class="product-item yy">
+                    <img src="./images/s1.jpg" alt="商品1">
+                    <h4>Living shell</h4>
+                    <p>商品价格：￥1280.00</p>
+                    <a href="../商品详情部分/index.html" class="button">+</a>
+                </div>
+
+                <div class="product-item yy">
+                    <img src="./images/s2.jpg" alt="商品2">
+                    <h4>Living shell Pro</h4>
+                    <p>商品价格：￥1680.00</p>
+                    <a href="../商品详情部分/index.html" class="button">+</a>
+                </div>
+                <div class="product-item yy">
+                    <img src="./images/s3.jpg" alt="商品3">
+                    <h4>Room shell Set</h4>
+                    <p>商品价格：￥960.00</p>
+                    <a href="../商品详情部分/index.html" class="button">+</a>
+                </div>
+                <div class="product-item yy" id="canopy-tents-pro"> 
+                    <img src="./images/s6.jpg" alt="商品2">
+                    <h4>Canopy tents pro</h4>
+                    <p>商品价格：￥1080.00</p>
+                    <a href="../商品详情部分/index.html" class="button">+</a>
+                </div>
+                <div class="product-item yy">
+                    <img src="./images/s4.jpg" alt="商品2">
+                    <h4>Living awning</h4>
+                    <p>商品价格：￥580.00</p>
+                    <a href="../商品详情部分/index.html" class="button">+</a>
+                </div>
+                <div class="product-item yy">
+                    <img src="./images/s5.jpg" alt="商品2">
+                    <h4>light weight awning</h4>
+                    <p>商品价格：￥680.00</p>
+                    <a href="../商品详情部分/index.html" class="button">+</a>
+                </div>
+                
+            </div>
+ 
+            <div class="clearfix"></div>
+        </div>
+    </div>
+<!-- //mission -->
+ 
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <p> &copy; 2024 itcast. All Rights Reserved | Design by<a href="#"> Land Shop</a></p>
+        <div class="clearfix"></div>
+    </div>
+</div>
+</body>
+<script src="./js/tree.js"></script>
+<script src="./js/index.js"></script>
+</html>

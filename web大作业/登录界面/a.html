@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="./dl.css">
+</head>
+<body>
+    <!-- 返回链接 -->
+    <a href="../主页部分/主页.html" class="back-link">返回</a>
+
+    <div class="login-container">
+        <div class="image-placeholder">
+            <!-- 登录图 -->
+            <img src="./img/s1.jpg" alt="Logo">
+        </div>
+        <h2>用户登录</h2>
+        
+        <!-- 登录表单 -->
+        <form>
+            <input type="text" class="input-field" placeholder="用户名" required>
+            <input type="password" class="input-field" placeholder="密码" required>
+            <button type="submit" class="login-button">登录</button>
+        </form>
+
+        <!-- 登录方式选择 -->
+        <div class="login-options">
+            <p>选择登录方式：</p>
+            <a href="#" id="captchaLogin">验证码登录</a> | 
+            <a href="#" id="weChatLogin">微信登录</a>
+        </div>
+
+        <!-- 分隔线 -->
+        <hr>
+
+        <!-- 验证码登录 -->
+        <div class="captcha-login">
+            <label for="captcha">输入验证码：</label>
+            <input type="text" id="captcha" class="input-field" placeholder="验证码" required>
+            <button type="button" class="login-button">提交验证码</button>
+        </div>
+
+        <!-- 微信登录 -->
+        <div class="wechat-login">
+            <button type="button" class="login-button" style="background-color: #4CAF50;">使用微信登录</button>
+        </div>
+    </div>
+
+    <!-- 引入外部JS文件 -->
+    <script src="./dl.js"></script>
+</body>
+</html>
